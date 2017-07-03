@@ -1,0 +1,347 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.saic.bigdata</groupId>
+	<artifactId>spark.rpcserver</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+
+
+		<dependency>
+			<groupId>jdk.tools</groupId>
+			<artifactId>jdk.tools</artifactId>
+			<version>1.6</version>
+			<scope>system</scope>
+			<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-examples</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-parent</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency> -->		
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-spark</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-hadoop</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-processing</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>			
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-core</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-format</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.carbondata</groupId>
+			<artifactId>carbondata-common</artifactId>
+			<version>0.2.0-incubating</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.6</version>
+		</dependency>
+
+
+<!-- 
+	<dependency>
+		<groupId>com.saic.bigdata</groupId>
+		<artifactId>carbon</artifactId>
+		<version>1.6</version>
+		<scope>system</scope>
+		<systemPath>D:/workspace/protobuf.sample/protobufserver.jar</systemPath>
+		<exclusions>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency> -->
+
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.protobuf-rpc-pro</groupId>
+			<artifactId>protobuf-rpc-pro-duplex</artifactId>
+			<version>3.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		
+<!-- 		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-yarn_2.10</artifactId>
+			<version>1.6.0</version>
+		</dependency> -->
+		
+		
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.10</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.10</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-hive_2.10</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_2.10</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>2.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>javax.servlet</artifactId>
+					<groupId>org.glassfish</groupId>
+				</exclusion> 
+			</exclusions>          
+		</dependency> -->
+<!-- 		<dependency>
+		    <groupId>org.apache.spark</groupId>
+		    <artifactId>spark-streaming-kafka-0-10-assembly_2.10</artifactId>
+		    <version>1.6.0</version>
+		</dependency> -->
+		
+<!-- 		<dependency>
+    <groupId>org.apache.hadoop</groupId>
+    <artifactId>hadoop-mapreduce-client-core</artifactId>
+    <version>2.2.0</version>
+</dependency> -->
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-graphx_2.10</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>2.2-beta-5</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.3</version>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+
+		<plugins>
+		
+
+            
+<!-- 			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin> -->
+		
+  
+  	
+		<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <configuration>
+          <shadedArtifactAttached>false</shadedArtifactAttached>
+          <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+          <outputFile>rpc-protobuf-carbondata.jar</outputFile>
+          <artifactSet>
+            <includes>
+            
+            	<include>commons-codec:commons-codec</include>
+				<include>commons-logging:commons-logging</include>
+				<include>org.slf4j:slf4j-api</include>
+				<include>org.slf4j:slf4j-log4j12</include>
+				<include>org.apache.commons:commons-csv</include>
+				<include>org.apache.commons:commons-lang3</include>
+				
+            
+            	<include>com.saic.bigdata:carbon</include>
+				<include>com.saic.bigdata:protobuf.sample</include>
+				<include>com.google.protobuf:protobuf-java</include>
+				<include>com.googlecode.protobuf-rpc-pro:protobuf-rpc-pro-duplex</include>
+				<include>io.netty:netty</include>
+				<include>io.netty:netty-common</include>
+				<include>io.netty:netty-buffer</include>
+				<include>io.netty:netty-codec</include>
+				<include>io.netty:netty-codec-haproxy</include>
+				<include>io.netty:netty-codec-http</include>
+				<include>io.netty:netty-codec-socks</include>
+				<include>io.netty:netty-transport</include>
+				<include>io.netty:netty-transport-rxtx</include>
+				<include>io.netty:netty-transport-sctp</include>
+				<include>io.netty:netty-transport-udt</include>
+				<include>org.apache.spark:spark-core_2.10</include>
+				
+    
+				<!-- <include>*:*</include> -->
+			
+		<!-- 	    <include>com.univocity:univocity-parsers</include>
+				<include>commons-codec:commons-codec</include>
+				<include>commons-logging:commons-logging</include>
+				<include>io.netty:netty</include>
+				<include>org.slf4j:slf4j-api</include>
+				<include>org.slf4j:slf4j-log4j12</include>
+				<include>org.apache.commons:commons-csv</include>
+				<include>org.apache.commons:commons-lang3</include>
+				
+				<include>org.apache.httpcomponents:httpclient</include>
+				<include>org.apache.httpcomponents:httpcore</include>
+				<include>pentaho-kettle:kettle-core</include>
+				
+					
+			  	<include>org.apache.spark:spark-sql_2.10</include>
+				<include>org.apache.spark:spark-core_2.10</include>
+				<include>org.apache.spark:spark-hive_2.10</include> 
+				
+            	<include>org.apache.carbondata:carbondata-spark</include>
+				<include>org.apache.carbondata:carbondata-processing</include>
+				<include>org.apache.carbondata:carbondata-core</include>
+				<include>org.apache.carbondata:carbondata-format</include>
+				<include>org.apache.carbondata:carbondata-hadoop</include>
+				<include>org.apache.carbondata:carbondata-core</include>
+				<include>org.apache.carbondata:carbondata-common</include> -->
+				
+				
+
+            </includes>
+          </artifactSet>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>org/datanucleus/**</exclude>
+                <exclude>META-INF/*.SF</exclude>
+                <exclude>META-INF/*.DSA</exclude>
+                <exclude>META-INF/*.RSA</exclude>
+                <exclude>META-INF/vfs-providers.xml</exclude>
+              </excludes>
+            </filter>
+          </filters>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <manifestEntries>
+                    <Specification-Version>32</Specification-Version>
+                    <Compile-Timestamp>2015-07-15 02.59.16</Compile-Timestamp>
+                  </manifestEntries>
+                </transformer>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                  <resource>META-INF/services/org.apache.spark.sql.sources.DataSourceRegister</resource>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.3.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>java</executable>
+					<includeProjectDependencies>false</includeProjectDependencies>
+					<classpathScope>compile</classpathScope>
+					<mainClass>com.saic.bigdata.spark.RunSpark</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+				<source>1.6</source>
+				<target>1.6</target>
+				<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+				<configuration> <systemProperties> <property> <name>logback.log.dir</name> 
+				<value>${project.build.directory}/surefire-reports</value> </property> </systemProperties> 
+				</configuration> </plugin> -->
+		</plugins>
+
+	</build>
+</project>

@@ -1,0 +1,44 @@
+// See README.txt for information and build instructions.
+//
+// Note: START and END tags are used in comments to define sections used in
+// tutorials.  They are not part of the syntax for Protocol Buffers.
+//
+// To get an in-depth walkthrough of this file and the related examples, see:
+// https://developers.google.com/protocol-buffers/docs/tutorials
+
+// [START declaration]
+syntax = "proto3";
+package tutorial;
+// [END declaration]
+
+// [START java_declaration]
+option java_package = "com.saic.bigdata";
+option java_outer_classname = "SaicDataModel";
+// [END java_declaration]
+
+// [START csharp_declaration]
+//option csharp_namespace = "Google.Protobuf.Examples.AddressBook";
+// [END csharp_declaration]
+
+// [START messages]
+
+
+  message Rx5DataModel {
+	  string pk = 1;
+	  string vin = 2;
+	  string work_model = 3;
+	  string hevsystemmode = 4;
+	  string data_date = 5;
+	  string latitude = 6;
+	  string longitude = 7;
+  }
+  
+message Rx5DataModelList {
+  
+
+  repeated Rx5DataModel dataModel = 1;
+}
+
+// Our address book file is just one of these.
+
+// [END messages]

@@ -1,0 +1,63 @@
+syntax = "proto2";
+package tutorial;
+option java_generic_services = true;  
+option java_package = "com.saic.bigdata.rpc";   
+option java_outer_classname = "Message";  
+
+
+  message Rx5DataModel {
+	  optional string pk = 1;
+	  optional string vin = 2;
+	  optional string work_model = 3;
+	  optional string hevsystemmode = 4;
+	  optional string data_date = 5;
+	  optional string latitude = 6;
+	  optional string longitude = 7;
+  }
+  
+    message SaicRecord {
+	  repeated string records = 1;
+  }
+  
+
+message Request {  
+    // RPC service name    
+    //required string serviceName = 1;  
+    // RPC method name  default execute  
+    //optional string methodName = 2;    
+    // RPC params  
+    //optional Params params = 3;  
+    
+     optional string sql = 1;    
+    // request next page flg
+    optional bool  nextPage = 2;
+}  
+  
+message Params {  
+    optional string key = 1;  
+    optional string value = 2;  
+}  
+  
+message Msg {  
+   optional string content = 1;  
+ }  
+  
+message Response {  
+    // RPC response code  
+    optional int32 code =1;  
+    // RPC response code msg  
+    optional string msg =2; 
+     // has next page flg
+    optional bool  nextPage = 3; 
+    repeated string cols = 4;
+    
+    repeated SaicRecord data = 5; 
+}  
+//interface  
+service RpcService {  
+    rpc call(Request) returns (Response); 
+}  
+  
+service ReplyService {  
+    rpc call(Msg) returns (Msg);  
+}  
